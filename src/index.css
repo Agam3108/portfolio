@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode */
+    /* Background: #FAFAFA -> HSL: 0 0% 98% */
+    --background: 0 0% 98%;
+    /* Text: #1A1A1A -> HSL: 0 0% 10% */
+    --foreground: 0 0% 10%;
+    
+    /* Border: #E4E4E7 -> HSL: 240 5% 90% */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    
+    /* Primary: #3B82F6 -> HSL: 217 91% 60% */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 98%;
+    
+    /* Secondary/Muted bg */
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 6% 10%;
+    
+    --muted: 240 5% 96%;
+    /* Muted Text: #6B7280 -> HSL: 215 14% 46% */
+    --muted-foreground: 215 14% 46%;
+    
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 90%;
+    --input: 240 5% 90%;
+    --ring: 217 91% 60%;
+    
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark Mode */
+    /* Background: #0A0A0A -> HSL: 0 0% 4% */
+    --background: 0 0% 4%;
+    /* Text: #E5E5E5 -> HSL: 0 0% 90% */
+    --foreground: 0 0% 90%;
+    
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 90%;
+    
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 90%;
+    
+    /* Primary: #22D3EE -> HSL: 188 86% 53% */
+    --primary: 188 86% 53%;
+    --primary-foreground: 0 0% 9%;
+    
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 240 4% 16%;
+    --muted-foreground: 215 14% 60%;
+    
+    --accent: 188 86% 53%;
+    --accent-foreground: 0 0% 9%;
+    
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Border: #27272A -> HSL: 240 4% 16% */
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 188 86% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased transition-colors duration-300;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+  code, pre {
+    @apply font-mono;
+  }
+}
