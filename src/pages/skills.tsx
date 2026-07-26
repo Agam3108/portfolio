@@ -1,12 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { 
   SiPython, SiCplusplus, SiTypescript, SiJavascript, 
-  SiNextdotjs, SiFastapi, SiDjango, SiExpress, 
-  SiRedis, SiCloudflare, SiDocker, SiReactquery
+  SiNextdotjs, SiFastapi, SiDjango, SiExpress, SiReactquery
 } from "react-icons/si"
 import { 
-  FaJava, FaReact, FaNodeJs, FaDatabase, 
-  FaGitAlt, FaCubes, FaNetworkWired, FaClock, FaLayerGroup 
+  FaReact, FaNodeJs, FaGitAlt
 } from "react-icons/fa"
 
 const skills = [
