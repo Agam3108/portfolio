@@ -9,6 +9,8 @@ import Skills from "./skills"
 import Contact from "./contact"
 
 export default function Home() {
+  const profileImgUrl = import.meta.env.VITE_PROFILE_IMAGE_URL || "/profile.png"
+
   return (
     <div className="flex flex-col space-y-24 pb-24">
       {/* Hero Section */}
@@ -56,7 +58,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-tr from-primary to-accent blur-2xl opacity-40 animate-pulse rounded-full" />
             <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-background bg-card">
               <img 
-                src="/profile.png" 
+                src={profileImgUrl} 
                 alt="Agam Srivastava" 
                 className="h-full w-full object-cover"
               />
