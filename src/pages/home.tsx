@@ -9,7 +9,13 @@ import Skills from "./skills"
 import Contact from "./contact"
 
 export default function Home() {
-  const profileImgUrl = import.meta.env.VITE_PROFILE_IMAGE_URL || "/profile.png"
+  let profileImgUrl = import.meta.env.VITE_PROFILE_IMAGE_URL || "/profile.png"
+  if (profileImgUrl.includes("drive.google.com/file/d/")) {
+    const match = profileImgUrl.match(/\/file\/d\/([^/]+)/)
+    if (match && match[1]) {
+      profileImgUrl = `https://lh3.googleusercontent.com/d/${match[1]}`
+    }
+  }
 
   return (
     <div className="flex flex-col space-y-24 pb-24">
